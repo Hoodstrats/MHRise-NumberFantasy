@@ -16,4 +16,8 @@ This is a simple Damage Numbers mod. I hate seeing small 1 to 2 digit damage pop
 - Use the Slider to change the multiplier value. It will auto save when a change is made and is persistent between sessions. By default the multiplier starts off at *25
 - Setting the slider to 0 will essentially disable the mod
 
+# Screenshots
 
+![small](screenshots/smallish.jpg)
+
+![big](screenshots/bigwithui.jpg)
