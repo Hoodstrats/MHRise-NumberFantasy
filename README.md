@@ -1,5 +1,7 @@
 # MHRise Damage Numbers Mod
-This is a simple Damage Numbers mod. I hate seeing small 1 to 2 digit damage popups. I've been longing for that Korean MMO experience where the huge damage numbers alone made the combat feel better (IMO). This mod tries to capture that by adding a multiplier to the value of the numbers DISPLAYED. This mod does not effect your actual damage. 
+This is a simple Damage Numbers mod. I hate seeing small 1 to 2 digit damage popups. I've been longing for that Korean MMO experience where the huge damage numbers alone made the combat feel better (IMO). This mod tries to capture that by adding a multiplier to the value of the numbers DISPLAYED. 
+
+## This mod does not effect your actual damage. 
 
 
 # Installation
