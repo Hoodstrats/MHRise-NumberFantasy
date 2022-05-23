@@ -15,7 +15,7 @@ This is a simple Damage Numbers mod. I hate seeing small 1 to 2 digit damage pop
 - Use the [REFRAMEWORK](https://www.nexusmods.com/monsterhunterrise/mods/26) menu key to open the REFramework window if it is not open.
 - Navigate to the "Script Generated UI" tab and click to open it.
 - Open the "Back To Korea" tab
-- Use the Slider to change the multiplier value. It will auto save when a change is made and is persistent between sessions. By default the multiplier starts off at *25
+- Use the Slider to change the multiplier value. It will auto save when a change is made and is persistent between sessions. By default the multiplier starts off at *25 (500 is max)
 - Setting the slider to 0 will essentially disable the mod
 
 # Screenshots
