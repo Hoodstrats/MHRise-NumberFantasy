@@ -20,6 +20,6 @@ This is a simple Damage Numbers mod. I hate seeing small 1 to 2 digit damage pop
 
 # Screenshots
 
-![small](screenshots/smallish.jpg)
-
-![big](screenshots/bigwithui.jpg)
+![closeup](screenshots/closeupdmg.png)
+![ref](screenshots/reframeworkmenu.png)
+![big](screenshots/regular.jpg)
