@@ -15,7 +15,7 @@ re.on_config_save(
 )
 
 -- The actual mod
-local dmg
+-- local dmg
 local d
 local t
 -- seems like modifying everything here instead of in POSTDMG worked out better
@@ -29,7 +29,7 @@ local function PreDMG(args)
   -- convert this value back to something the game can read
   t[4] = sdk.to_ptr(d)
   -- display for debugging in REFRAMEWORK UI
-  dmg = tostring(orig)
+  -- dmg = tostring(orig)
 end
 
 local function PostDMG(retval)
@@ -44,10 +44,10 @@ re.on_draw_ui(
     local changed = false
     if not imgui.collapsing_header("Number Fantasy") then return end
     imgui.text("This mod is purely Cosmetic. I like big damage numbers.")
-    imgui.text("0 = no multiplier (default damage numbers)")
+    imgui.text("1 = no multiplier (default damage numbers)")
 
     -- having the changed field makes it so that the value actually changes
-    changed, cfg.multi = imgui.slider_int("Multiplier", cfg.multi, 0, 500)
+    changed, cfg.multi = imgui.slider_int("Multiplier", cfg.multi, 1, 500)
 
     imgui.text("Changes will save automatically.")
 
