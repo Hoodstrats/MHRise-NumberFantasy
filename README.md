@@ -17,6 +17,8 @@ This is a simple Damage Numbers mod. I hate seeing small 1 to 2 digit damage pop
 - Open the "Back To Korea" tab
 - Use the Slider to change the multiplier value. It will auto save when a change is made and is persistent between sessions. By default the multiplier starts off at *25 (500 is max)
 - Setting the slider to 1 will essentially disable the mod
+#### - *NOTE: To add a SPECIFIC value you can press the 'TAB' key while draggin the slider and it will let you type*
+<br>
 
 ## Changelog:
 ---
