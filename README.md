@@ -22,6 +22,9 @@ This is a simple Damage Numbers mod. I hate seeing small 1 to 2 digit damage pop
 
 ## Changelog:
 ---
+#### v0.3.0
+- Added: Randomize checkbox. This will allow you to randomize between the original multiplier and another. 
+*suggested by: AzureAlembic*
 #### v0.2.0
 - Fixed: Multiplier slider going below 1, making all dmg 0 at that point.
 #### v0.1.0

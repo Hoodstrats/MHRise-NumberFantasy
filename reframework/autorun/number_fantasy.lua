@@ -3,7 +3,9 @@ local cfg = json.load_file("number_fantasy.json")
 
 if not cfg then
   cfg = {
-    multi = 25
+    multi = 25,
+    rng = 50,
+    randomize = false
   }
 end
 
@@ -23,9 +25,14 @@ local function PreDMG(args)
   -- store the incoming arguments in a table
   t = args
   -- original damage for debug
-  local orig = sdk.to_int64(t[4])
+  -- local orig = sdk.to_int64(t[4])
   -- the 4th argument (2 in the actual in game method) is the DMG argument its an INT32
-  d = sdk.to_int64(t[4]) * cfg.multi
+  if not cfg.randomize then
+    d = sdk.to_int64(t[4]) * cfg.multi
+  else
+    local rand = math.random(cfg.multi, cfg.rng)
+    d = sdk.to_int64(t[4]) * rand
+  end
   -- convert this value back to something the game can read
   t[4] = sdk.to_ptr(d)
   -- display for debugging in REFRAMEWORK UI
@@ -42,14 +49,19 @@ sdk.hook(sdk.find_type_definition("snow.gui.GuiManager"):get_method("setDamageDi
 re.on_draw_ui(
   function()
     local changed = false
+
     if not imgui.collapsing_header("Number Fantasy") then return end
     imgui.text("This mod is purely Cosmetic. I like big damage numbers.")
     imgui.text("1 = no multiplier (default damage numbers)")
-
-    -- having the changed field makes it so that the value actually changes
     changed, cfg.multi = imgui.slider_int("Multiplier", cfg.multi, 1, 500)
 
-    imgui.text("Changes will save automatically.")
+    changed, cfg.randomize = imgui.checkbox("Randomize?", cfg.randomize)
+    if cfg.randomize then
+      imgui.text("Randomize between Regular Multiplier and This Value.")
+      changed, cfg.rng = imgui.slider_int("", cfg.rng, 1, 500)
+    end
 
+    imgui.text("Changes will save automatically.")
+    imgui.new_line()
     -- imgui.text("Damage: " .. dmg)
   end)
